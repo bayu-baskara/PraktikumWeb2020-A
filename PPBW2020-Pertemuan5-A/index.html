@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- menghubungkan html ke css -->
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon"> <!-- favicon untuk disamping title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title> <!-- judul halaman -->
+</head>
+<body>
+    <!-- tags "div" digunakan untuk mengelompokkan elemen atau tag-tag agar menjadi suatu grup -->
+    <div class="header"> <!-- digunakan sbg header dari halaman -->
+        <h1>Halaman Pendaftaran</h1> 
+        <h2>Pendaftaran Anggota Coder Empire 2020 Universitas Udayana</h2>
+    </div>
+
+     <!-- berisi form inputan user -->
+    <form action="" method="GET" class="form">
+        <!-- penggunaan tags "div" pada class "row1", "row2", "upload", "upload2" untuk mempermudah dalam proses layouting dan styling di CSS -->
+        <!-- layouting form ini menggunakan CSS Grid -->
+        <!-- penjelasan layoting ada di file style.css -->
+        <div class="row1">
+            <input type="text" class="nama" placeholder="Nama Lengkap">
+            <input type="text" class="nama_p" placeholder="Nama Panggilan">
+        </div>
+        <div class="row2">
+            <input type="text" class="telp" placeholder="No. Telepon">
+            <input type="email" class="email" placeholder="Email">
+        </div>
+        <input type="text" class="tl_lahir" placeholder="Tanggal Lahir">
+        <input type="text" class="tp_lahir" placeholder="Tempat Lahir">
+        <!-- tags "select" digunakan untuk objek form yang berupa list pilihan yang dapat dipilih oleh user -->
+        <select name="agama" class="agama" id="">
+            <option value="">Islam</option>
+            <option value="">Hindu</option>
+            <option value="">Kristen/Protestan</option>
+            <option value="">Khatolik</option>
+            <option value="">Buddha</option>
+            <option value="">Lainnya</option>
+        </select>
+        <input type="text" class="univ" placeholder="Universitas">
+        <input type="text" class="fakjur" placeholder="Fakultas/Jurusan">
+        <input type="text" class="jabatan" placeholder="Jabatan">
+        <input type="text" class="alamat" placeholder="Alamat Asal">
+        <div class="upload">
+            <label class="foto" for="file">Foto Almamater</label>
+            <label class="scan" for="file">Scan KTP</label>
+        </div>
+        <div class="upload2">
+            <input type="file" class="foto-alma">
+            <input type="file" class="scan-ktp">
+        </div>
+    </form>
+    <!-- tags "button" digunakan untuk menambahkan tombol baik didalam/diluar dari form  -->
+    <button type="submit" >Daftar</button>
+</body>
+</html>

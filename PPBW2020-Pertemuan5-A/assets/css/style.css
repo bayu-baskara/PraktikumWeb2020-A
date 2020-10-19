@@ -1,0 +1,111 @@
+/*margin : mengatur jarak dari luar*/
+/*padding : mengatur jarak dari dalam*/
+
+.header { /*style untuk class header*/
+    margin-top: -50px; /*margin atas*/
+    margin-bottom: 10px; /*margin bawah*/
+    width: 100%;  /*lebar header : full screen*/
+    height: 200px; /*tinggi header*/
+    background-image: url(../img/background.jpg); /*menambahkan gambar pada header yg bersumber dari local file*/
+    color: white; /*memberi warna putih untuk semua elemen yg ada didalam class header*/
+}
+
+.header h1 { /*style untuk h1 header*/
+    font-size: 40pt; /*ukuran font*/
+    padding-top: 50px; /*padding atas*/
+    padding-left: 200px; /*padding kiri*/
+}
+
+.header h2 { /*style h2 header*/
+    margin-top: -30px; /*margin atas :  antara h2 & h1*/
+    padding-left: 200px; /*padding kiri*/
+}
+
+.form { /*style form :  layouting dengan CSS grid*/
+    display: grid; /*deklarasi grid pada CSS*/
+    /*fr atau fraction merupakan unit untuk mengatur proporsi tiap item pada kolom atau baris*/
+    grid-template-columns: 1fr 1fr 1fr; /*jumlah kolom : ada 3 kolom, dg masing2 mengambil 1 fr*/
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; /*jumlah baris : ada 5 baris, dg masing2 mengambil 1 fr*/
+    gap: 10px 10px; /*memberi jarak antar grid (samping dan bawah)*/
+    /* mendefinisikan sebuah area dengan memberinya nama dan kemudian menentukan lokasi area */
+    grid-template-areas: 
+    /*deklarasi menjadi seperti berikut dengan menambahkan class yg akan dijadikan area*/
+        "row1 row1 row1" 
+        "row2 row2 row2"
+        "tl_lahir tp_lahir agama"
+        "univ fakjur jabatan"
+        "alamat alamat alamat"
+        "upload upload upload"
+        "upload2 upload2 upload2";
+    padding-left: 100px; /*padding kiri : mengurangi 100px*/
+    padding-right: 100px; /*padding kanan : mengurangi 100px*/
+}
+
+/*perlu memberikan style tersendiri pada class row1, row2, upload, dan upload2 karena memiliki layout jumlah kolom yg berbede yaitu hanya 2 kolom*/
+.row1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*kolom : 2 (untuk class nama & nama _p)*/
+    grid-template-rows: 1fr; /*baris : 1*/
+    gap: 0 10px; /*memberi jarak 10px dibagian bawah*/
+    grid-template-areas:
+      "nama nama_p"; /*deklarasi area (karena didalam class row1 ada 2 class yaitu nama & nama_p)*/
+    grid-area: row1; /*lokasi area penempatan class nama & nama_p*/
+    height: 35px; /*mengatur tinggi form inputan*/
+  }
+  .nama { grid-area: nama; } /*lokasi area penempatan class nama, yaitu diarea nama*/
+  .nama_p { grid-area: nama_p; } /*lokasi area penempatan class nama_p, yaitu diarea nama_p*/
+
+  .row2 { 
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*kolom : 2 (untuk class telp & email)*/
+    grid-template-rows: 1fr; /*baris : 1*/
+    gap: 0px 10px; /*memberi jarak 10px dibagian bawah*/
+    grid-template-areas:
+      "telp email"; /*deklarasi area (karena didalam class row1 ada 2 class yaitu telp & email)*/
+    grid-area: row2; /*lokasi area penempatan class telp & email*/
+  }
+  .telp { grid-area: telp; } /*lokasi area penempatan class telp, yaitu diarea telp*/
+  .email { grid-area: email; } /*lokasi area penempatan class email, yaitu diarea email*/
+
+  .alamat { grid-area: alamat; } /*lokasi area penempatan class alamat, yaitu diarea alamat*/
+  .tl_lahir { grid-area: tl_lahir; } /*lokasi area penempatan class tl_lahir, yaitu diarea tl_lahir*/
+  .tp_lahir { grid-area: tp_lahir; } /*lokasi area penempatan class tp_lahir, yaitu diarea tp_lahir*/
+  .agama { grid-area: agama; } /*lokasi area penempatan class agama, yaitu diarea agama*/
+  .univ { grid-area: univ; } /*lokasi area penempatan class univ, yaitu diarea univ*/
+  .fakjur { grid-area: fakjur; } /*lokasi area penempatan class fakjur, yaitu diarea fakjur*/
+  .jabatan { grid-area: jabatan; } /*lokasi area penempatan class jabatan, yaitu diarea jabatan*/
+
+  /*penjelasan class upload dan upload2 sama seperti row1 & row2*/
+  .upload {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 2em;
+    grid-template-areas:
+      "foto scan";
+    grid-area: upload;
+  }
+  .foto { grid-area: foto; }
+  .scan { grid-area: scan; }
+
+  .upload2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 2em;
+    grid-template-areas:
+      "foto-alma scan-ktp";
+    grid-area: upload2;
+  }
+  .foto-alma { grid-area: foto-alma; }
+  .scan-ktp { grid-area: scan-ktp; }
+
+/*style button*/
+button {
+    margin-left: 100px; /*margin kiri*/
+    margin-top: 10px; /*margin atas*/
+    height: 40px; /*tinggi button/tombol*/
+    width: 60px; /*lebar button/tombol*/
+    color: white; /*warna teks pada tombol*/
+    background-color: green; /*warna tombol*/
+}
