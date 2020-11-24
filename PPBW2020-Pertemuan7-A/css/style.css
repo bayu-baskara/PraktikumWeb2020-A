@@ -1,0 +1,17 @@
+.jumbotron {
+    margin: auto;
+    color: white;
+    background-color: orangered;
+    margin-top :75px;
+    margin-left: 300px;
+    width: 50%;
+}
+.form-group {
+    padding-left: 170px;
+}
+button {
+    margin-left: 295px;
+}
+table {
+    background-color: white;
+}
