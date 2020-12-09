@@ -1,0 +1,41 @@
+.jumbotron {
+    max-width: 90%;
+    margin: 50px auto;
+}
+
+table {
+    max-width: 98%;
+    margin: 50px auto;
+    margin-top: 25px;
+}
+
+thead {
+    background-color: rgb(223, 0, 0);
+}
+
+th {
+    color: white;
+}
+
+h2 {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.btn-primary {
+    margin-left: 12px;
+    margin-bottom: -25px;
+}
+
+.btn-secondary {
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.btn-danger {
+    margin-left: 10px;
+}
+
+h3 {
+    margin-left: 12px;
+}
